@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import { useAuthStore } from './stores/auth';
+
+useAuthStore() // use sans rien d'autre, on veut juste initialiser le store ici pour verifier le localStorage et auto-login si on a deja un token
+
 </script>
 
 <template>
